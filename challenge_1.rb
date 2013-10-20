@@ -34,7 +34,8 @@ def pmt rate, nper, pv
 end
 
 
-
+#=begin
+# add 'begin/end' comments to remove for challenge_2 program
 puts "Enter the interest rate"
 rate = gets.chomp.to_f
 
@@ -45,4 +46,4 @@ puts "Enter the principal value of the loan"
 pv = gets.chomp.to_f
 
 puts "Your monthly payment will be $#{pmt(rate, nper, pv)}."
-#puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
+#=end
