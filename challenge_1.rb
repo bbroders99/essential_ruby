@@ -19,7 +19,7 @@
 
 def pmt rate, nper, pv
 
-	pmt = 0.0
+	pay = 0.0
 	numerator = 0.0
 	denominator = 0.0
 
@@ -27,10 +27,9 @@ def pmt rate, nper, pv
 
 	denominator = ((1 + rate) ** nper) - 1
 
-	pmt = numerator / denominator
+	pay = numerator / denominator
 
-	return pmt.round(2)
-
+	return pay.round(2)
 
 end
 
