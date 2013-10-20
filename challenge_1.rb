@@ -17,5 +17,33 @@
 # Your code to define the method goes here.
 # =========================================
 
-puts "Github successful!"
-puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
+def pmt rate, nper, pv
+
+	pmt = 0.0
+	numerator = 0.0
+	denominator = 0.0
+
+	numerator = pv * rate * (1 + rate) ** nper
+
+	denominator = ((1 + rate) ** nper) - 1
+
+	pmt = numerator / denominator
+
+	return pmt.round(2)
+
+
+end
+
+
+
+puts "Enter the interest rate"
+rate = gets.chomp.to_f
+
+puts "Enter the number of payments"
+nper = gets.chomp.to_f
+
+puts "Enter the principal value of the loan"
+pv = gets.chomp.to_f
+
+puts "Your monthly payment will be $#{pmt(rate, nper, pv)}."
+#puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
