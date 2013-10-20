@@ -17,4 +17,5 @@
 # Your code to define the method goes here.
 # =========================================
 
+puts "Github successful!"
 puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
